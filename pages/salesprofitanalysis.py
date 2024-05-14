@@ -121,13 +121,13 @@ products_table_ag_grid = dag.AgGrid(
    rowData = superstore.to_dict('records'), 
    id = "products-table",
    columnDefs=[
-      {"field": "Product ID", 'presentation' : 'input'},
-      {"field": "Category", 'filter': True},
-      {"field": "Sub-Category", 'filter': True},
-      {"field": "Product Name", 'filter': True},
-      {"field": "Profit", "format" :FormatTemplate.money(2)}
+      {"field": "Product ID","filter" : True},
+      {"field": "Category","filter" : True},
+      {"field": "Sub-Category","filter" : True},
+      {"field": "Product Name","header name": "Product", "filter" : True},
+      {"field": "Profit","filter" : True}
    ],
-   className="ag-theme-alpine-dark",
+   style_name = "ag-theme-alphine-dark",
    columnSize="sizeToFit",
    dashGridOptions={'pagination':True},
 )

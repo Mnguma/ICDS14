@@ -70,25 +70,17 @@ products_table = dash_table.DataTable(
       'margin': '10px 0',
       'height': 80
    },
-   filter_action="native",
-   filter_options={
-      "placeholder_text" : "Search for a value"
-   },
-   style_filter={"backgroundColor" : "transparent", "color" : "#cba052", 'textAlign': 'left'},
-   sort_action="native",
-   style_header={
-      'backgroundColor': 'transparent', "color" : "#cba052"
-   },
-   style_cell_conditional=[
-      {'if': {'column_id': 'Product ID'}, 'textAlign' : "center", 'width': '15%'},
-      {'if': {'column_id': 'Category'}, 'textAlign' : "center", 'width': '10%'},
-      {'if': {'column_id': 'Sub-Category'}, 'textAlign' : "center", 'width': '15%'},
-      {'if': {'column_id': 'Product Name'}, 'textAlign' : "right", 'width': '50%'},
-      {'if': {'column_id': 'Profit'}, 'textAlign' : "right", 'width': '10%'},
-   ],
-   style_cell={'textAlign': 'left', 'backgroundColor': 'transparent', 'font-family': 'Arial'},
    style_as_list_view=True,
-   css=[{'selector': '::placeholder', 'rule': 'color: #cba052;'}]  
+    style_cell={'padding': '5px'},
+   style_header={
+        'backgroundColor': 'white',
+        'fontWeight': 'bold'
+    },
+    style_data_conditional=[{
+        'if': {'column_editable': False},
+        'backgroundColor': 'rgb(30, 30, 30)',
+        'color': 'white'
+    }]
 )
 
 # Layout
