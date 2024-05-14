@@ -127,7 +127,7 @@ products_table_ag_grid = dag.AgGrid(
       {"field": "Product Name","header name": "Product", "filter" : True},
       {"field": "Profit","filter" : True}
    ],
-   style_name = "ag-theme-alphine-dark",
+   className = "ag-theme-alphine-dark",
    columnSize="sizeToFit",
    dashGridOptions={'pagination':True},
 )
